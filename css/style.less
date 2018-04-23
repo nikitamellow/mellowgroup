@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+
+*{
+    font-family: 'Lato', sans-serif;
+    font-size: 11pt;
+    
+}
+body,html{
+    width: 100%;
+    overflow-x: hidden;
+    min-width: 300px;
+}
+a{
+    color: inherit;
+}
+a, a:hover{
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+    cursor: pointer;
+}
+h1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 5rem;
+    font-weight: 300;
+    text-align: center;
+    @media screen and (max-width: 600px){
+        font-size: 3rem;
+    }
+     @media screen and (max-width: 991px) and (min-width: 601px){
+        font-size: 4rem;
+    }
+}
+h2{
+    font-size: 2rem;
+}
+.container-fluid{
+    width: 100%;
+    padding: 70px 30px;
+    @media screen and (max-width: 600px){
+        width: 100%;
+    }
+}
+.container{
+    @media screen and (max-width: 600px){
+        width: 100%;
+    }
+}
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating){
+    margin-right: 0;
+}
+
+.video{
+    position: fixed;
+    top: 0;
+    left:0;
+    padding: 0;
+    z-index: -1;
+    overflow: hidden;
+    width: 100%;
+    video{
+        width: 100%;
+        @media screen and (max-width: 600px){
+            left: -40%;
+            width: 400%;
+        }
+         @media screen and (max-width: 991px) and (min-width: 601px){
+             left: -30%;
+            width: 300%;
+        }
+        @media screen and (max-width: 1199px) and (min-width: 992px){
+            left: -20%;
+            width: 250%;
+        }
+        @media screen and (min-width: 1200px){
+            left: -10%;
+            width: 150%;
+        }
+        @media screen and (min-width: 1500){
+            left: 0;
+            width: 101%;
+        }
+    }
+}
+.navigation1{
+    z-index: 1;
+    position: absolute;
+    width: 30%;
+    top: 25%;
+    left: 10%;
+    .nav-item{
+        padding: 20px;
+        text-align: left;
+        :hover{
+            cursor: pointer;
+        }
+        a{
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.9);
+        }
+        a:hover{
+            color: white;
+        }
+    }
+    @media screen and (max-width: 600px){
+        top: 50%;
+    }
+    @media screen and (max-width: 991px){
+        top: 50%;
+    }
+}
+.sidenav-trigger{
+    display: none;
+}
+
+.home{
+    padding-top: 15%;
+    z-index: 1;
+    height: 100vh;
+    color: rgba(255,255,255,0.9);
+    background-color: rgba(0,0,0,0.8);
+    h1,h5,p{
+        text-align: right;
+    }
+    h5{
+        @media screen and (max-width: 600px){
+            font-size: 11pt;
+        }
+         @media screen and (max-width: 991px) and (min-width: 601px){
+            font-size: 15pt;
+        }
+    }
+    h1{
+        //text-shadow: -2px -2px 2px black;
+        font-size: 10rem;
+        letter-spacing: 40px;
+        @media screen and (max-width: 600px){
+            font-size: 4rem;
+        }
+         @media screen and (max-width: 991px) and (min-width: 601px){
+            font-size: 5rem;
+        }
+    }
+}
+
+.card-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    .card{
+        background-color: transparent;
+        box-shadow: none;
+        //border-radius: 300px;
+        padding-top: 30px;
+        width: 30%;
+        margin: 30px;
+        h5{
+          text-align: center;
+        }
+        p{
+            text-align: center;
+            font-size: 15pt;
+        }
+        img{
+            display: block;
+            //width: 30%;
+            margin: 0 auto;
+        }
+        @media screen and (max-width: 768px){
+            width: 90%;
+            margin: 10px;
+        }
+        @media screen and (max-width: 992px) and (min-width: 769px){
+            width: 45%;
+            margin: 10px;
+        }
+        .card-body{
+            padding: 20px;
+        }
+    }
+}
+.about{
+    background-color: white;
+    .btn{
+        margin-top: 20px;
+        padding: 15px 30px;
+        height: auto;
+        color: rgba(0,0,0,0.9);
+        background-color: rgba(149, 180, 195, 0.9);
+    }
+}
+
+.image{
+    height: 70vh;
+    @media screen and (max-width: 600px){
+        height: 30vh;
+    }
+    @media screen and (max-width: 750px) and (min-width: 601px){
+        height: 40vh;
+    }
+    @media screen and (max-width: 991px) and (min-width: 751px){
+        height: 50vh;
+    }
+    @media screen and (max-width: 1199px) and (min-width: 992px){
+        height: 60vh;
+    }
+}
+
+.projects{
+    z-index: -1;
+    background-image: url(../img/bg1.jpg);
+    background-size: cover;
+    .arrow-buttons{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1000;
+        .left, .right{
+            padding-top: 5%;
+            opacity: 0.1;
+            width: 20%;
+            height: 100%;
+            @media screen and (max-width: 600px){
+                display: none;
+            }
+             @media screen and (max-width: 991px) and (min-width: 601px){
+                padding-top: 25%;
+            }
+            @media screen and (max-width: 1199px) and (min-width: 992px){
+                padding-top: 10%;
+            }
+        }
+    }
+    .carousel-item{
+        width: 30%;
+        height: auto;
+        .card{
+            padding-top: 20px;
+            transition: all .2s ease;
+            width: 100%;
+            img{
+                display: block;
+                margin: 0 auto;
+                width: 30%;
+                @media screen and (max-width: 600px){
+                    width: 50%;
+                }
+                @media screen and (max-width: 991px) and (min-width: 601px){
+                    width: 40%;
+                }
+            }
+            .card-content{
+                p{
+                    font-size: 20pt;
+                    @media screen and (max-width: 600px){
+                        font-size: 15pt;
+                    }
+                }
+                text-align: center;
+            }
+            .card-action{
+                //position: relative;
+            }
+            .btn{
+                width: 100%;
+                height: auto;
+                padding: 20px 10px;
+            }
+            /*:hover{
+                .card-action{
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    padding: 0;
+                }
+            }*/
+            /*.card-action:hover{
+                
+            }*/
+           
+        }
+        @media screen and (max-width: 600px){
+            width: 80%;
+        }
+        @media screen and (max-width: 991px) and (min-width: 601px){
+            width: 70%;
+        }
+    }
+    
+    /*.carousel-item{
+        width: 35%;
+        .card{
+            :hover{
+                cursor: pointer;
+            }
+            width: 100%;
+        }
+        .hidden{
+            
+            display: none;
+            opacity: 1;
+            @media screen and (max-width: 600px){
+                display: block;
+            }
+            @media screen and (max-width: 991px) and (min-width: 601px){
+            
+            }
+        }
+        
+        img{
+            width: 30%;
+            display: block;
+            margin: 0 auto;
+        }
+        .card-title{
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            color: rgba(0,0,0,0.8);
+        }
+        .card-image{
+            padding: 10px;
+        }
+        .card-action{
+            padding: 90px 5px;
+            text-align: center;
+            a{
+                margin-right: 0;
+            }
+            @media screen and (max-width: 600px){
+                padding: 60px 5px;
+            }
+             @media screen and (max-width: 991px) and (min-width: 601px){
+                padding: 50px 5px;
+            }
+        }
+        @media screen and (max-width: 600px){
+            width: 80%;
+        }
+         @media screen and (max-width: 991px) and (min-width: 601px){
+            width: 60%;
+        }
+        @media screen and (max-width: 1199px) and (min-width: 992px){
+            width: 40%;
+        }
+    }*/
+    
+    >.row{
+        margin: 0;
+    }
+    .row:nth-of-type(2){
+        height: auto;
+    }
+}
+
+.contacts{
+    color: rgba(255,255,255,0.8);
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    .contact{
+        text-align: center;
+        span{
+            display: block;
+            font-family: 'Raleway', sans-serif;
+            padding: 15px;
+            margin: 10px;
+            border: 1px solid rbga(255,255,255,0.8);
+            h2{
+                @media screen and (max-width: 600px){
+                    font-size: 1.5rem;
+                }
+                 @media screen and (max-width: 991px) and (min-width: 601px){
+                    font-size: 1.5rem;
+                }
+            }
+            .telegram-link{
+                display: flex;
+                justify-content: center;
+                h2{
+                    margin: 0;
+                    line-height: 50px;                
+                }
+            }
+        }
+    }
+    .contact:nth-of-type(2){
+        h2{
+            margin: 10px;
+        }
+    }
+}
+.sidenav{
+    padding: 10% 10px 10px 10px;
+    background-color: #f4f4f4;
+}
+a.sidenav-trigger{
+    padding: 20px;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2000;
+    position: fixed;
+    top:0;
+    right:0;
+}
+.language{
+    padding: 10px;
+    position: fixed;
+    top:0;
+    right:0;
+    color: white;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    transition: all .2s ease;
+    margin: 10px;
+}
+.language:hover{
+    background-color: #4ba6b2;
+    margin: 15px;
+}
+
+.light-theme{
+    background-color: #f4f4f4;
+    color: rgba(0,0,0,0.8);
+}
+
