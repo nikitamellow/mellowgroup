@@ -116,15 +116,27 @@ h2{
 }
 
 .home{
-    padding-top: 15%;
+    //padding-top: 15%;
     z-index: 1;
     height: 100vh;
     color: rgba(255,255,255,0.9);
     background-color: rgba(0,0,0,0.8);
+    img{
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+    }
     h1,h5,p{
         text-align: right;
     }
     h5{
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        padding: 0;
+        text-align: center;
+        word-spacing:normal;
+        
         @media screen and (max-width: 600px){
             font-size: 11pt;
         }
@@ -184,6 +196,7 @@ h2{
 }
 .about{
     background-color: white;
+    padding-top: 20px;
     .btn{
         margin-top: 20px;
         padding: 15px 30px;
@@ -210,6 +223,7 @@ h2{
 }
 
 .projects{
+    height: 90vh;
     z-index: -1;
     background-image: url(../img/bg1.jpg);
     background-size: cover;
