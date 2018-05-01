@@ -216,16 +216,43 @@ h2{
 .image{
     height: 70vh;
     @media screen and (max-width: 600px){
-        height: 30vh;
+        height: 50vh;
     }
     @media screen and (max-width: 750px) and (min-width: 601px){
-        height: 40vh;
+        height: 50vh;
     }
     @media screen and (max-width: 991px) and (min-width: 751px){
         height: 50vh;
     }
     @media screen and (max-width: 1199px) and (min-width: 992px){
         height: 60vh;
+    }
+    video{
+        position: relative;
+        width: 100%;
+        @media screen and (max-width: 600px){
+            left: -10%;
+            top: -80%;
+            width: 300%;
+        }
+        @media screen and (max-width: 991px) and (min-width: 601px){
+            left: -10%;
+            top: -60%;
+            width: 250%;
+        }
+        @media screen and (max-width: 1199px) and (min-width: 992px){
+            left: 0;
+            top: -50%;
+            width: 250%;
+        }
+        @media screen and (min-width: 1200px){
+            left: 0;
+            width: 100%;
+        }
+        @media screen and (min-width: 1500){
+            left: 0;
+            width: 100%;
+        }
     }
 }
 
@@ -260,6 +287,9 @@ h2{
                 padding-top: 10%;
             }
         }
+    }
+    .carousel{
+        height: 60vh;
     }
     .carousel-item{
         width: 30%;
@@ -392,7 +422,7 @@ h2{
         }
     }
     .row:nth-of-type(2){
-        height: auto;
+        height: 100%;
         >div{
             @media screen and (max-width: 600px){
                 padding-left: 0;
@@ -405,10 +435,12 @@ h2{
         }
     }
     @media screen and (max-width: 600px){
+        //height: 100vh;
         padding-left: 0;
         padding-right: 0;
     }
     @media screen and (max-width: 991px) and (min-width: 601px){
+        //height: 100vh;
         padding-left: 0;
         padding-right: 0;
     }

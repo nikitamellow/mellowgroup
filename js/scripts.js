@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $('.parallax').parallax();
     $('.carousel').carousel();
-    
+    Revealator.effects_padding = '-200';
     
     /*$('[class^="to-"]').click(function(){
         let targetId = $(this).attr('class').split(' ')[0].split('-')[1];
