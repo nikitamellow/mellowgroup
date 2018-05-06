@@ -66,10 +66,11 @@ h2{
     video{
         width: 100%;
         @media screen and (max-width: 600px){
-            left: -40%;
-            width: 400%;
+            //left: -40%;
+            //width: 400%;
+            display: none;
         }
-         @media screen and (max-width: 991px) and (min-width: 601px){
+        @media screen and (max-width: 991px) and (min-width: 601px){
              left: -30%;
             width: 300%;
         }
@@ -88,8 +89,27 @@ h2{
     }
 }
 .for-phones{
+    //position: fixed;
+    //top: 0;
+    //left:0;
+    width: 100%;
+    padding: 0;
+    z-index: -1;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 1px;
+    
     @media screen and (min-width: 600px){
         display: none;
+    }
+    >.parallax{
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        -webkit-transform: translateZ(-1px) scale(2);
     }
 }
 .navigation1{
@@ -124,6 +144,7 @@ h2{
 }
 
 .home{
+    
     z-index: 1;
     height: 100vh;
     color: rgba(255,255,255,0.9);
@@ -166,6 +187,9 @@ h2{
          @media screen and (max-width: 991px) and (min-width: 601px){
             font-size: 5rem;
         }
+    }
+    @media screen and (max-width: 600px){
+        margin-top: -100vh;
     }
 }
 
@@ -216,6 +240,30 @@ h2{
         color: rgba(0,0,0,0.9);
         background-color: rgba(149, 180, 195, 0.9);
     }*/
+    @media screen and (max-width: 600px){
+        //height: 100vh;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 10px;
+    }
+    @media screen and (max-width: 991px) and (min-width: 601px){
+        //height: 100vh;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .row:nth-of-type(2){
+        height: 100%;
+        >div{
+            @media screen and (max-width: 600px){
+                padding-left: 0;
+                padding-right: 0;
+            }
+            @media screen and (max-width: 991px) and (min-width: 601px){
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
 }
 
 .about .carousel-item, .projects .carousel-item{
@@ -488,6 +536,9 @@ h2{
         h2{
             margin: 10px;
         }
+    }
+    @media screen and (max-width: 600px){
+        margin-top: -100vh;
     }
 }
 .sidenav{
