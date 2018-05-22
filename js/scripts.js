@@ -7,10 +7,14 @@ $(document).ready(function(){
     
     centralize();
     placeIcons();
+    //sectionMargin();
     
     $(window).resize(function(){
-        centralize(); 
+        centralize();
+        placeIcons();
+        //sectionMargin();
     });
+    
     
     
     
@@ -84,4 +88,8 @@ var placeIcons = function(){
     }
     //console.log (els);
 }
+
+/*var sectionMargin = function(){
+    $('.section').css('margin-top', -$('.navbar').height() );
+}*/
 
