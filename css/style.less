@@ -9,8 +9,11 @@
 
 *{
     //font-family: 'Lato', sans-serif;
-    font-family: 'Gill sans', serif;
+    font-family: 'Gill sans';
     font-size: 11pt;
+    /*-webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;*/ 
 }
 body,html{
     width: 100%;
@@ -123,24 +126,45 @@ a:hover{
     position: absolute;
 }
 nav.navbar{
-    background-color: rgba(0,0,0,.9);
+    background-color: rgba(0,0,0,.8);
     color: #fff;
     position: fixed;
     top: 0px;
     width: 100%;
     z-index: 1000;
     #navbarContent{
-        display: flex;
         justify-content: space-between;
     }
     .dropdown-toggle, ul.right .nav-link{
         text-transform: uppercase;
     }
+    .dropdown-menu{
+        margin-top: 7px;
+        border-radius: 0px;
+        padding: 10px 30%;
+        background-color: rgba(0,0,0,.6);
+        .dropdown-item{
+            color: rgba(255,255,255,.6);
+        }
+        .dropdown-item:hover{
+            background-color: transparent;
+            color: #fff;
+        }
+        .dropdown-divider{
+            border: none;
+        }
+        .dropdown-header{
+            color: #fff;
+        }
+    }
+    .navbar-toggler{
+        background-color: rgba(255,255,255,.9);
+    }
 }
 .home{
     z-index: 1;
     color: rgba(255,255,255,0.9);
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.4);
     .col-12{
         padding-top: 15vh;
         position: static;
@@ -189,8 +213,9 @@ nav.navbar{
     }*/
 }
 .about{
+    @lightGray: rgba(0,0,0,.4);
     position: relative;
-    background-color: #fff;
+    background-color: rgba(255,255,255,0.9);
     .el{
         position: absolute;
         width: 10%;
@@ -200,13 +225,17 @@ nav.navbar{
         .img{
             width: 50%;
             margin: 0 auto;
-            img{
+            /*img{
                 width: 100%;
                 display: block;
+            }*/
+            svg{
+                fill: @lightGray;
             }
         }
         .text{
             text-align: center;
+            color: @lightGray;
         }
         @media screen and (max-width: 600px){
             position: static;
@@ -223,6 +252,17 @@ nav.navbar{
         }
         @media screen and (min-width: 1500){
             
+        }
+    }
+    .el:hover{
+        .img{
+            svg{
+                fill: #709441;
+                cursor: pointer;
+            } 
+        }
+        .text{
+            color: #141414;
         }
     }
     /*.el:nth-of-type(2){
@@ -243,12 +283,13 @@ nav.navbar{
         }
     }
 }
+
 .contacts{
     padding: 5vh 0vh;
     background-color: rgba(0,0,0,.6);
     color: #fff;
     .logo{
-        padding: 5vh 0vh;
+        padding: 15vh 0vh 0vh 0vh;
         img{
             width: 20%;
             display: block;
