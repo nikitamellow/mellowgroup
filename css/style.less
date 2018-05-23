@@ -35,6 +35,7 @@ a:hover{
     //margin-top: -50px;
 }
 .video{
+    filter: blur(0px);
     position: fixed;
     top: 0;
     left:0;
@@ -160,6 +161,11 @@ nav.navbar{
     .navbar-toggler{
         background-color: rgba(255,255,255,.9);
     }
+    .right{
+        .nav-item{
+            margin: 0 2vw;
+        }
+    }
 }
 .home{
     z-index: 1;
@@ -225,10 +231,6 @@ nav.navbar{
         .img{
             width: 50%;
             margin: 0 auto;
-            /*img{
-                width: 100%;
-                display: block;
-            }*/
             svg{
                 fill: @lightGray;
             }
@@ -256,23 +258,17 @@ nav.navbar{
     }
     .el:hover{
         .img{
+            width: 60%;
             svg{
                 fill: #709441;
                 cursor: pointer;
             } 
         }
         .text{
+            font-size: 12pt;
             color: #141414;
         }
     }
-    /*.el:nth-of-type(2){
-        left: 400px;
-        top: 270px;
-    }
-    .el:nth-of-type(3){
-        left: 150px;
-        top: 270px;
-    }*/
     .central{
         position: absolute;
         z-index: 2;
@@ -286,7 +282,7 @@ nav.navbar{
 
 .contacts{
     padding: 5vh 0vh;
-    background-color: rgba(0,0,0,.6);
+    //background-color: rgba(0,0,0,.6);
     color: #fff;
     .logo{
         padding: 15vh 0vh 0vh 0vh;
@@ -309,4 +305,8 @@ nav.navbar{
             text-align: center;
         }
     }
+}
+
+.blurred{
+    filter: blur(5px);
 }
