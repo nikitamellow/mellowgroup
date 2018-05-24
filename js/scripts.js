@@ -17,6 +17,18 @@ $(document).ready(function(){
         //sectionMargin();
     });
     
+    /*$('.navbar-toggler').click(function () {
+        if( $('.navbar-toggler').attr('aria-expanded') ) {
+            console.log( 'true' );
+            $('.navbar-toggler').css('transform','rotateZ(90deg)');
+            return;
+        } else {
+            console.log( 'false' );
+            $('.navbar-toggler').css('transform','rotateZ(0deg)');
+            return;
+        }
+        
+    });*/
     
     /*document.addEventListener('wheel', function(){
         //alert($('.contacts').offset().top);
@@ -116,8 +128,8 @@ var placeIcons = function() {
     let N = 9;
     let dfi = 2 * Math.PI / N;
     
-    console.log(center);
-    console.log(radius);
+    //console.log(center);
+    //console.log(radius);
     
     let i = 0;
     for(i=0;i<N;i++){
