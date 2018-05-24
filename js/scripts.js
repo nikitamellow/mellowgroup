@@ -1,17 +1,19 @@
 $(document).ready(function(){
     $('#fullpage').fullpage();
-    //$('.parallax').parallax();
-    //$('.carousel').carousel();
-    //Revealator.effects_padding = '-200';
+
     
+    //Revealator.effects_padding = '-200';
     
     centralize();
     placeIcons();
     //sectionMargin();
     
-    $(window).resize(function(){
+    $(window).resize(function() {
+        
+        
         centralize();
         placeIcons();
+        
         //sectionMargin();
     });
     
@@ -81,35 +83,50 @@ var centralize = function(){
     
 }
 
-var placeIcons = function(){
+var placeIcons = function() {
     
-    let Ra = 280;
-    let Rb = 380;
-    //let els = Array.from( document.getElementsByClassName('el'));
-    //console.log (els);
-    //let N = els.length;
+    let radius = {};
+    let center = {};
+    
+    if( $(window).width() >= 1200 ) {
+        radius.a = 280;
+        radius.b = 380;
+        center.x = Math.round( $('.about').width()/2.3 );
+        center.y = Math.round( $('.about').height()/2.3 );
+    } else if( $(window).width() < 1200 && $(window).width() >= 992 ) {
+        //992  -  1200
+        radius.a = 230;
+        radius.b = 280;
+        center.x = Math.round( $('.about').width()/2.35 );
+        center.y = Math.round( $('.about').height()/2.35 );
+    } else if( $(window).width() < 992 && $(window).width() >= 768 ) {
+        // 768 - 992
+        radius.a = 250;
+        radius.b = 290;
+        center.x = Math.round( $('.about').width()/2.45 );
+        center.y = Math.round( $('.about').height()/2.4 );
+    } else if( $(window).width() < 768 && $(window).width() >= 576 ) {
+        // 576 - 768
+        radius.a = 230;
+        radius.b = 230;
+        center.x = Math.round( $('.about').width()/2.47 );
+        center.y = Math.round( $('.about').height()/2.2 );
+    }
+    
     let N = 9;
     let dfi = 2 * Math.PI / N;
-    console.log(N);
-    console.log(dfi);
     
-    
-    let center = {};
-    center.x = Math.round( $('.about').width()/2.2 );
-    center.y = Math.round( $('.about').height()/2.2 );
     console.log(center);
+    console.log(radius);
     
     let i = 0;
     for(i=0;i<N;i++){
-        console.log('cycle');
-        $('div.el:nth-of-type('+(i+2)+')').css('left', Math.round(center.x + Rb * Math.sin(dfi*i) ) );
-        $('div.el:nth-of-type('+(i+2)+')').css('top', Math.round(center.y + Ra * Math.cos(dfi*i) ) );
-        /*console.log (els[i].style.left);
-        els[i].style.left = toString(Math.round( center.x + R * Math.sin(dfi*i) ))+'px';
-        els[i].style.top = toString(Math.round( center.y + R * Math.cos(dfi*i) ))+'px';
-        console.log (els[i].style.left);*/
+        $('div.el:nth-of-type('+(i+2)+')').css('left', Math.round(center.x + radius.b * Math.sin(dfi*i) ) );
+        $('div.el:nth-of-type('+(i+2)+')').css('top', Math.round(center.y + radius.a * Math.cos(dfi*i) ) );
+        
     }
     //console.log (els);
+    
 }
 
 /*var sectionMargin = function(){
