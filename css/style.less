@@ -119,13 +119,10 @@ a:hover{
 }
 nav.navbar{
     @media screen and (max-width: 992px){
-        padding: 5px 10px;
+        padding: 10px 10px;
     }
     @media screen and (max-width: 768px){
         background-color: transparent;
-    }
-    @media screen and (max-width: 992px){
-        padding: 15px 10px;
     }
     background-color: rgba(0,0,0,.8);
     color: #fff;
@@ -136,8 +133,14 @@ nav.navbar{
     padding: 5px 60px;
     .nav-link{
         font-size: 20pt;
+        
+        @media screen and (min-width: 992px){
+            padding-top: 0;
+            padding-bottom: 0;    
+        }
         @media screen and (max-width: 992px){
             font-size: 16pt;
+            
         }
     }
     #navbarContent{
@@ -154,12 +157,23 @@ nav.navbar{
     }
     .dropdown-toggle, ul.right .nav-link{
         text-transform: uppercase;
+        font-weight: 300;
+    }
+    .dropdown-toggle{
+        .dropdown-arrow-custom{
+            width: 15px;
+            height: 10px;
+            background-image: url(../img/arrow_dropdown.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            margin-bottom: 5px;
+        }
     }
     .dropdown-toggle::after{
         content: "";
         border: none;
         background: none;
-        background-image: url(../img/arrow_dropdown.png);
     }
     .dropdown-menu{
         @media screen and (max-width: 992px){
