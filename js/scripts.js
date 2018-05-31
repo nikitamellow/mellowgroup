@@ -91,7 +91,7 @@ var centralize = function(){
     
     $('.central').css('left', Math.round( (ww - iw)/2 ));
     
-    $('.central').css('top', Math.round( (wh - ih)/2 ));
+    $('.central').css('top', Math.round( (wh - ih)/1.9 ));
     
 }
 
@@ -104,7 +104,7 @@ var placeIcons = function() {
         radius.a = 250;
         radius.b = 380;
         center.x = Math.round( $('.about').width()/2.3 );
-        center.y = Math.round( $('.about').height()/2.3 );
+        center.y = Math.round( $('.about').height()/2.2 );
     } else if( $(window).width() < 1200 && $(window).width() >= 992 ) {
         //992  -  1200
         radius.a = 230;
