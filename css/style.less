@@ -6,6 +6,10 @@
     font-family: "Gill sans";
     src: url("../fonts/GillSans.woff");
 }
+@font-face{
+    font-family: "Gill sans light";
+    src: url("../fonts/GillSans-Light.woff");
+}
 
 *{
     //font-family: 'Lato', sans-serif;
@@ -133,6 +137,7 @@ nav.navbar{
     padding: 5px 60px;
     .nav-link{
         font-size: 20pt;
+        font-family: 'Gill sans light';
         
         @media screen and (min-width: 992px){
             padding-top: 0;
@@ -144,7 +149,7 @@ nav.navbar{
         }
     }
     #navbarContent{
-        justify-content: space-between;
+        justify-content: flex-end;
         @media screen and (max-width: 992px){
             padding-left: 5%;
         }
