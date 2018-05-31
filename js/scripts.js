@@ -101,7 +101,7 @@ var placeIcons = function() {
     let center = {};
     
     if( $(window).width() >= 1200 ) {
-        radius.a = 280;
+        radius.a = 250;
         radius.b = 380;
         center.x = Math.round( $('.about').width()/2.3 );
         center.y = Math.round( $('.about').height()/2.3 );
@@ -132,9 +132,9 @@ var placeIcons = function() {
     //console.log(radius);
     
     let i = 0;
-    for(i=0;i<N;i++){
-        $('div.el:nth-of-type('+(i+2)+')').css('left', Math.round(center.x + radius.b * Math.sin(dfi*i) ) );
-        $('div.el:nth-of-type('+(i+2)+')').css('top', Math.round(center.y + radius.a * Math.cos(dfi*i) ) );
+    for(i=0;i<N;i++) {
+        $('div.el:nth-of-type('+(i+2)+')').css('left', Math.round(center.x + radius.b * Math.cos(dfi*i + 3*Math.PI/2) ) );
+        $('div.el:nth-of-type('+(i+2)+')').css('top', Math.round(center.y + radius.a * Math.sin(dfi*i + 3*Math.PI/2) ) );
         
     }
     //console.log (els);
