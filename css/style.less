@@ -118,9 +118,6 @@ a:hover{
     display: none;
 }
 /*---------------------------------------------------------------*/
-#fullpage{
-    position: absolute;
-}
 nav.navbar{
     @media screen and (max-width: 992px){
         padding: 10px 10px;
@@ -226,10 +223,13 @@ nav.navbar{
         }
     }
 }
+
+
 #home .home{
     z-index: 1;
     color: rgba(255,255,255,0.9);
     background-color: rgba(0,0,0,0.4);
+    height: 100vh;
     .col-12{
         padding-top: 31vh;
         position: static;
@@ -382,6 +382,8 @@ nav.navbar{
     padding: 5vh 0vh;
     background-color: rgba(0,0,0,.6);
     color: #fff;
+    height: 100vh;
+    overflow: hidden;
     .logo{
         padding: 15vh 0vh 0vh 0vh;
         img{
@@ -430,18 +432,17 @@ nav.navbar{
 /*TEAM */
 #team{
     .bg-insert-first{
-        
         background-color: rgba(0,0,0,.5);
-        height: 30vh;
+        height: 20vh;
     }
     .bg-insert-second{
-         background-color: rgba(0,0,0,.5);
+        background-color: rgba(0,0,0,.5);
         h1.title{
             text-align: center;
             color: white;
-            line-height: 20vh;
+            line-height: 15vh;
         }
-        height: 20vh;
+        height: 15vh;
     }
     
     .team{
@@ -458,10 +459,29 @@ nav.navbar{
                 }
             }
             .about{
-                padding: 2vh 10px;
+                padding: 3vh 10px 2vh 10px;
                 text-align: center;
                 h4:nth-of-type(1){
+                    font-size: 1.8rem;
                     color: #7e9f54;
+                }
+                h4:nth-of-type(2){
+                    font-size: 1.4rem;
+                    color: rgba(100,100,100,.8);
+                }
+            }
+            .links{
+                position: relative;
+                img{
+                    
+                    display: block;
+                    margin: 0 auto;
+                    height: 60px;
+                    filter: invert(0.7);
+                }
+                img:hover{
+                    height: 65px;
+                    cursor: pointer;
                 }
             }
         }
