@@ -1,0 +1,186 @@
+
+@font-face{
+    font-family: "Gill sans";
+    src: url("../fonts/GillSans.woff");
+}
+@font-face{
+    font-family: "Gill sans light";
+    src: url("../fonts/GillSans-Light.woff");
+}
+
+*{
+    font-family: 'Gill sans';
+    font-size: 11pt;
+    color: #1e1c1c;
+}
+body,html{
+    width: 100%;
+    overflow-x: hidden;
+    min-width: 300px;
+    position: relative;
+}
+a{
+    color: inherit;
+}
+a, a:hover{
+    color: inherit;
+    text-decoration: none;
+}
+a:hover{
+    color: inherit;
+    cursor: pointer;
+}
+
+/*NAVIGATION*/
+nav.navbar{
+    z-index: 1;
+    padding: 7vh 10% 0 10%;
+    .navbar-brand{
+        img{
+            width: 80%;
+        }
+    }
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    .navbar-nav{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .nav-item{
+        padding-left: 9%;
+        a{
+            //color: #1e1c1c;
+            font-family: Gill sans light;
+            font-size: 1.75rem;
+        }
+        a:hover{
+            border-bottom: 4px solid green;
+        }
+    }
+}
+
+/*HOME*/
+
+#home{
+    background-color: white;
+}
+#home .home{
+    color: rgba(255,255,255,0.9);
+    //height: 100vh;
+    .image-logo{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 20%;
+        }
+    }
+}
+
+
+/*TEAM */
+#team{
+    .team{
+        .people{
+            padding-top: 30vh;
+            height: 100vh;
+            .row{
+                padding: 0 0 0 25%;
+                .person-wrapper{
+                    padding: 0 0 4vh 0;
+                    .photo{
+                        img{
+                            width: 80%;
+                            display: block;
+                            margin: 0 auto;
+                        }
+                    }
+                    .about{
+                        padding: 3vh 10px 2vh 10px;
+                        text-align: center;
+                        h4{
+                            font-size: 1rem;
+                        }
+                        h5{
+                            font-size: 0.9rem;
+                            color: rgba(100,100,100,.8);
+                        }
+                    }
+                    /*.links{
+                        position: relative;
+                        img{
+                            
+                            display: block;
+                            margin: 0 auto;
+                            height: 60px;
+                            filter: invert(0.7);
+                        }
+                        img:hover{
+                            //height: 65px;
+                            cursor: pointer;
+                        }
+                    }*/
+                }
+                
+            }
+        }
+        .controls{
+            height: 100vh;
+            padding: 0 5% 10vh 5%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            .pages{
+                
+                display: flex;
+                flex-flow: row;
+                .page{
+                    
+                    padding: 0 10% 15px 10%;
+                    span{
+                        font-family: 'Gill sans light';
+                        font-size: 2rem;    
+                        border-bottom: 2px solid green;
+                    }
+                    
+                }
+                .arrow{
+                    display: flex;
+                    align-items: flex-end;
+                    padding: 0 20px 25px 20px;
+                    img{
+                        width: 60%;
+                    }
+                }
+            }
+        }
+                
+    }
+}
+
+/*FOOTER*/
+footer.container-fluid{
+    padding: 0 10% 10vh 10%;
+    position: absolute;
+    bottom: 0;
+    .social{
+        .soc-wrapper{
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            width: 100%;
+            a{
+                padding-right: 1%;
+                img{
+                    width: 90%;
+                }    
+            }
+            
+        }
+            
+    }
+}
