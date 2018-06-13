@@ -50,9 +50,16 @@ nav.navbar{
                 display: none;
             }
         }
+        h4{
+            @media (min-width: 992px){
+                display: none;
+            }
+            font-family: "Gill sans light";
+            font-size: 2.5rem;
+        }
     }
     background-color: transparent;
-    position: absolute;
+    position: fixed;
     width: 100%;
     .navbar-nav{
         width: 100%;
@@ -248,8 +255,10 @@ nav.navbar{
 /*NEWS*/
 #news{
     nav.navbar{
-        position: fixed;
         background-color: white;
+        @media (max-width: 992px){
+            position: fixed;
+        }
     }
     .news{
         height: 100vh;
@@ -271,15 +280,107 @@ nav.navbar{
         }  
     }
     .controls{
-        position: fixed;
-        top: 0vh;
-        right: 0;
         padding: 30vh 1% 0 1%;
         @media (max-width: 992px){
             padding: 5vh 1% 0 1%;
         }
+        @media (min-width: 992px){
+            position: fixed;
+            top: 0vh;
+            right: 0;
+        }
     }
 }
+
+/*EVENTS*/
+
+#events{
+    nav.navbar{
+        background-color: white;
+        position: fixed;
+    }
+    .articles{
+        padding: 30vh 1% 0 10%;
+        @media (max-width: 992px){
+            padding: 30vh 5% 0 5%;
+        }
+        article{
+            p{
+                font-family: "Gill sans light";
+                line-height: 20pt; 
+                letter-spacing: 0.5px;
+                text-align: justify;
+                font-size: 1.5rem;
+            }
+        }  
+    }
+    .controls{
+        height: 100vh;
+        padding: 30vh 10% 10vh 1%;
+        @media (max-width: 992px){
+            padding: 5vh 1% 0 1%;
+        }
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        
+        .tab{
+            padding: 0 5%;
+            margin: 5% 0;
+            width: 100%;
+            border-left: 3px solid transparent;
+            .tab-inner{
+                
+                padding: 0 0 2vh 0;
+                border-bottom: 2px solid #bbb;
+                h4,span{
+                    font-family: "Gill sans light";
+                }
+                .time{
+                    color: #bbb;
+                    font-size: 1.3rem;
+                }
+            }
+        }
+        .tab.active{
+            border-left: 3px solid @lightGreen;
+        }
+        
+        .pages{
+            display: flex;
+            flex-flow: row;
+            justify-content: flex-end;
+            .page{
+                padding: 0 5% 15px 5%;
+                span{
+                    font-family: 'Gill sans light';
+                    font-size: 2rem;
+                    border-bottom: 2px solid transparent;
+                }
+                span.active{
+                    border-bottom: 2px solid @lightGreen;
+                }
+                span:hover{
+                    cursor: pointer;
+                }
+            }
+            
+            .arrow{
+                display: flex;
+                align-items: flex-end;
+                padding: 0 20px 25px 20px;
+                img{
+                    width: 60%;
+                }
+            }
+            .arrow:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
 
 /*FOOTER*/
 footer.container-fluid{
