@@ -247,16 +247,28 @@ nav.navbar{
 
 /*NEWS*/
 #news{
+    nav.navbar{
+        position: fixed;
+        background-color: white;
+    }
+    .news{
+        height: 100vh;
+    }
     .articles{
         padding: 30vh 1% 0 10%;
+        
         @media (max-width: 992px){
             padding: 30vh 5% 0 5%;
         }
-        article{
-            
-        }
+        /*.article-wrapper{
+            overflow-y: scroll;
+            height: 65vh;
+        }*/
     }
     .controls{
+        position: fixed;
+        top: 0vh;
+        right: 0;
         padding: 30vh 1% 0 1%;
         @media (max-width: 992px){
             padding: 5vh 1% 0 1%;
