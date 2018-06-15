@@ -38,10 +38,10 @@ a:hover{
 
 /*NAVIGATION*/
 nav.navbar{
-    z-index: 1;
-    padding: 7vh 10% 0 10%;
+    z-index: 100;
+    padding: 7vh 10% 2vh 10%;
     @media (max-width: 992px){
-        padding: 5vh 5% 0vh 5%;
+        padding: 5vh 5% 2vh 5%;
     }
     .navbar-brand{
         img{
@@ -253,6 +253,86 @@ nav.navbar{
 }
 
 /*NEWS*/
+
+.news{
+    .articles{
+        .news-wrapper{
+            @media (max-width: 768px){
+                flex-flow: column;
+            }
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .tile{
+                @media (max-width: 768px){
+                    width: 100%;
+                }
+                background-size: cover;
+                background-position: center;
+                position: relative;
+                width: 30%;
+                height: 400px;
+                margin-top: 2vh;
+                margin-bottom: 2vh;
+                .filter, .content{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                }
+                .filter{
+                    z-index: 0;
+                    background-color: rgba(0,0,0,.5);
+                }
+                .content{
+                    padding: 5vh 5% 5% 5%;
+                    z-index: 1;
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: space-between;
+                    .top{
+                        h1{
+                            color: white;
+                            font-family: "Gill sans light";
+                            text-align: justify;
+                            font-size: 3rem;
+                        }
+                        .time{
+                            color: white;
+                        }
+                    }
+                    .bottom{
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+                }
+                
+                /**/
+            }
+            .tile.main{
+                @media (max-width: 768px){
+                    width: 100%;
+                }
+                width: 65%;                
+                background-image: url(../img/news/1/1.png);
+            }
+            div.tile:nth-of-type(2){
+                
+                background-image: url(../img/news/2/1.png);
+            }
+            div.tile:nth-of-type(3){
+                
+                background-image: url(../img/news/3/3.jpg);
+            }
+            div.tile:nth-of-type(4){
+                
+                background-image: url(../img/news/4/4.jpg);
+            }
+        }
+    }
+}
+
+
+/*NEWS VIEW*/
 #news{
     nav.navbar{
         background-color: white;
@@ -291,6 +371,7 @@ nav.navbar{
         }
     }
 }
+
 
 /*EVENTS*/
 
